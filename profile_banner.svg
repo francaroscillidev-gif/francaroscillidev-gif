@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%">
+  <defs>
+    <!-- Dark High-Tech Background -->
+    <linearGradient id="bgBanner" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080C14"/>
+      <stop offset="45%" stop-color="#0B132B"/>
+      <stop offset="100%" stop-color="#050810"/>
+    </linearGradient>
+
+    <!-- Neon Glow Accents -->
+    <linearGradient id="neonCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F2FE"/>
+      <stop offset="100%" stop-color="#4FACFE"/>
+    </linearGradient>
+
+    <linearGradient id="accentEmerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00E676"/>
+      <stop offset="100%" stop-color="#00B0FF"/>
+    </linearGradient>
+
+    <linearGradient id="violetPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A855F7"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Circuit Pattern -->
+    <pattern id="circuit" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+      <circle cx="0" cy="0" r="2" fill="rgba(0,242,254,0.1)"/>
+    </pattern>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="360" rx="16" fill="url(#bgBanner)"/>
+  <rect width="1200" height="360" rx="16" fill="url(#circuit)"/>
+  
+  <!-- Subtle Border Frame -->
+  <rect width="1198" height="358" x="1" y="1" rx="15" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
+
+  <!-- Top Accent Neon Bar -->
+  <rect x="0" y="0" width="1200" height="3" fill="url(#neonCyan)"/>
+
+  <!-- Ambient Light Orbs -->
+  <circle cx="150" cy="80" r="160" fill="#00F2FE" opacity="0.04" filter="url(#glow)"/>
+  <circle cx="1050" cy="280" r="200" fill="#A855F7" opacity="0.05" filter="url(#glow)"/>
+
+  <!-- Left: Stylized Monogram / Brand Icon -->
+  <g transform="translate(80, 75)">
+    <!-- Outer Shield / Bracket -->
+    <path d="M 40,30 L 15,95 C 10,105 10,115 15,125 L 40,190" 
+          fill="none" stroke="url(#neonCyan)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+    <path d="M 160,30 L 185,95 C 190,105 190,115 185,125 L 160,190" 
+          fill="none" stroke="url(#neonCyan)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" opacity="0.35"/>
+    
+    <!-- Central Viva Chevron -->
+    <path d="M 60,50 L 100,165 C 102,172 108,172 110,165 L 150,50" 
+          fill="none" stroke="url(#accentEmerald)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Pulse Center Dot -->
+    <circle cx="105" cy="100" r="6" fill="#00E676" filter="url(#glow)"/>
+  </g>
+
+  <!-- Center Content: Typography & Value Proposition -->
+  <!-- Status Badge -->
+  <g transform="translate(320, 70)">
+    <rect width="280" height="26" rx="13" fill="rgba(0, 242, 254, 0.08)" stroke="rgba(0, 242, 254, 0.25)" stroke-width="1"/>
+    <circle cx="14" cy="13" r="4" fill="#00E676" filter="url(#glow)"/>
+    <text x="26" y="17" font-family="ui-monospace, monospace" font-size="11" font-weight="600" fill="#00F2FE" letter-spacing="1.5">
+      AGENTIC SYSTEMS &amp; MCP PROTOCOL
+    </text>
+  </g>
+
+  <!-- Main Headline Title -->
+  <text x="320" y="145" 
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" 
+        font-size="46" 
+        font-weight="900" 
+        letter-spacing="-1" 
+        fill="#FFFFFF">
+    IMAGO VIVA <tspan fill="url(#neonCyan)">·</tspan> <tspan font-weight="400" fill="#94A3B8" font-size="34">Franca Roscilli</tspan>
+  </text>
+
+  <!-- Subheadline -->
+  <text x="320" y="185" 
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" 
+        font-size="18" 
+        font-weight="500" 
+        fill="#CBD5E1" 
+        letter-spacing="0.2">
+    Engineering Deterministic Sandboxes, AI Safety &amp; Multi-Agent Infrastructure
+  </text>
+
+  <!-- Tag Pills Grid -->
+  <g transform="translate(320, 225)">
+    <!-- Pill 1 -->
+    <g transform="translate(0, 0)">
+      <rect width="175" height="32" rx="6" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+      <text x="14" y="20" font-family="ui-monospace, monospace" font-size="12" font-weight="600" fill="#38BDF8">🛡️ Zero-Trust Sandboxing</text>
+    </g>
+
+    <!-- Pill 2 -->
+    <g transform="translate(190, 0)">
+      <rect width="180" height="32" rx="6" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+      <text x="14" y="20" font-family="ui-monospace, monospace" font-size="12" font-weight="600" fill="#A855F7">🔌 Model Context Protocol</text>
+    </g>
+
+    <!-- Pill 3 -->
+    <g transform="translate(385, 0)">
+      <rect width="185" height="32" rx="6" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+      <text x="14" y="20" font-family="ui-monospace, monospace" font-size="12" font-weight="600" fill="#00E676">🤖 Autonomous QA Agents</text>
+    </g>
+
+    <!-- Pill 4 -->
+    <g transform="translate(585, 0)">
+      <rect width="180" height="32" rx="6" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+      <text x="14" y="20" font-family="ui-monospace, monospace" font-size="12" font-weight="600" fill="#F59E0B">🧠 Local-First Memory</text>
+    </g>
+  </g>
+
+  <!-- Bottom Interactive Tech Bar -->
+  <g transform="translate(320, 290)">
+    <text font-family="ui-monospace, monospace" font-size="12" fill="#64748B" letter-spacing="1">
+      CORE ARCHITECTURE: <tspan fill="#F1F5F9">TypeScript</tspan> · <tspan fill="#F1F5F9">Python</tspan> · <tspan fill="#F1F5F9">Linux Sandboxing</tspan> · <tspan fill="#F1F5F9">Deterministic Evaluation</tspan>
+    </text>
+  </g>
+</svg>
